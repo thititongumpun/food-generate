@@ -10,7 +10,7 @@ import {Wrapper} from './App.styles';
 export interface Foods {
   id: number;
   foodName: string;
-  review: number;
+  liked: number;
   imageData: string;
 }
 
