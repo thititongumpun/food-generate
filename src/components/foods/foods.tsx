@@ -10,7 +10,7 @@ const FoodItem: React.FC<Props> = ({food}) => (
     <img src={food.imageData} alt={food.foodName} />
     <div>
       <h3>{food.foodName}</h3>
-      <p>{food.review}</p>
+      <p>Score: {food.review}</p>
     </div>
   </Wrapper>
 );

@@ -4,6 +4,7 @@ import { useQuery } from 'react-query';
 import FoodItem from './components/foods/foods';
 
 import Grid from '@material-ui/core/Grid';
+import { LinearProgress } from '@material-ui/core';
 
 import {Wrapper} from './App.styles';
 export interface Foods {
@@ -23,6 +24,9 @@ const App = () => {
     getFoods
   )
   console.log(data);
+
+  if(error) return <div>....error.....</div>
+  if(isLoading) return <LinearProgress />;
   
   return (
     <Wrapper>
