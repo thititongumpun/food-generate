@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { useQuery } from 'react-query';
 
+import FoodItem from './components/foods/foods';
+
+import Grid from '@material-ui/core/Grid';
+
+import {Wrapper} from './App.styles';
 export interface Foods {
   id: number;
   foodName: string;
@@ -20,7 +25,15 @@ const App = () => {
   console.log(data);
   
   return (
-    <div>Hello WOrld</div>
+    <Wrapper>
+      <Grid container spacing={3}>
+        {data?.map((food) => (
+          <Grid xs={12} sm={4}>
+            <FoodItem food={food} />
+          </Grid>
+        ))}
+      </Grid>
+    </Wrapper>
   );
 }
 
