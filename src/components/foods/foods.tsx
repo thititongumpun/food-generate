@@ -2,7 +2,6 @@ import {Foods} from '../../App';
 import {Wrapper} from './foods.style';
 import { Button } from '@material-ui/core';
 import FavoriteTwoToneIcon from '@material-ui/icons/FavoriteTwoTone';
-
 interface Props {
   food: Foods;
 }

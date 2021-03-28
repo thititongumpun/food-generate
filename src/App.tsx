@@ -8,8 +8,9 @@ import { useTheme } from './Theme';
 import Grid from '@material-ui/core/Grid';
 import { LinearProgress } from '@material-ui/core';
 
-
 import {Wrapper, Button} from './App.styles';
+import { ResponsiveDrawer } from './components/drawer/drawer';
+
 export interface Foods {
   id: number;
   foodName: string;
@@ -44,7 +45,8 @@ const App: React.FC = () => {
         <Grid container spacing={3}>
           {data?.map((food) => (
             <Grid item key={food.id} xs={12} sm={4}>
-              <FoodItem food={food} />
+              {/* <FoodItem food={food} /> */}
+              <ResponsiveDrawer food={food}/>
             </Grid>
           ))}
         </Grid>
