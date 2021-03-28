@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components';
 import { useTheme } from './Theme';
 import Grid from '@material-ui/core/Grid';
 import { LinearProgress } from '@material-ui/core';
-// import {Button} from '@material-ui/core';
+
 
 import {Wrapper, Button} from './App.styles';
 export interface Foods {
@@ -41,7 +41,6 @@ const App: React.FC = () => {
           {theme.mode === 'dark' ? 'Light Mode' : 'Dark Mode'}
         </Button>
         </div>
-        
         <Grid container spacing={3}>
           {data?.map((food) => (
             <Grid item key={food.id} xs={12} sm={4}>
