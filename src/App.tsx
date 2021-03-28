@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useQuery } from 'react-query';
 
-import FoodItem from './components/foods/foods';
 
 import { ThemeProvider } from 'styled-components';
 import { useTheme } from './Theme';

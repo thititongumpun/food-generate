@@ -15,13 +15,17 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
-
+import { Router, Link, Switch, Route } from 'react-router-dom';
 import {Foods} from '../../App';
 import {Wrapper} from './drawer.style';
 import { Button } from '@material-ui/core';
 import FavoriteTwoToneIcon from '@material-ui/icons/FavoriteTwoTone';
+import { createBrowserHistory } from 'history';
+
+import Random from '../random/Random';
 
 const drawerWidth = 240;
+const history = createBrowserHistory();
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -55,6 +59,11 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
       padding: theme.spacing(1)
     },
+    //using
+    link: {
+      textDecoration: 'none',
+      color: theme.palette.text.primary
+    }
   }),
 );
 
@@ -77,27 +86,31 @@ export const ResponsiveDrawer: React.FC<Props> = ({window, food}) => {
   };
 
   const drawer = (
-    <div>
-      <div className={classes.toolbar} />
-      <Divider />
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
+    <Router history={history}>
+      <div>
+        <Link to="/" className={classes.link}>
+          <ListItem button>
+            <ListItemIcon>
+              {/* HOMEICON */}
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Home"}/>
           </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
+        </Link>
+        <Link to="/random" className={classes.link}>
+          <ListItem button>
+            <ListItemIcon>
+              {/* HOMEICON */}
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Random Food"}/>
           </ListItem>
-        ))}
-      </List>
-    </div>
+        </Link>
+        <Switch>
+          <Route exact path="/random" component={Random} />
+        </Switch>
+      </div>  
+    </Router>
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
