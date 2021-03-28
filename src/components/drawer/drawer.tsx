@@ -68,7 +68,6 @@ interface Props {
 }
 
 export const ResponsiveDrawer: React.FC<Props> = ({window, food}) => {
-  // const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -118,7 +117,7 @@ export const ResponsiveDrawer: React.FC<Props> = ({window, food}) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Responsive drawer
+            Thai Best Food!!!
           </Typography>
         </Toolbar>
       </AppBar>

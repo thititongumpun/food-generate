@@ -37,19 +37,18 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={{ mode: theme.mode }}>
       <Wrapper>
+        <Grid container spacing={3}>
+          {data?.map((food) => (
+            <Grid item key={food.id} xs={12} sm={4}>
+              <ResponsiveDrawer food={food}/>
+            </Grid>
+          ))}
+        </Grid>
         <div className="buttons">
         <Button onClick={() => theme.toggle()}>
           {theme.mode === 'dark' ? 'Light Mode' : 'Dark Mode'}
         </Button>
         </div>
-        <Grid container spacing={3}>
-          {data?.map((food) => (
-            <Grid item key={food.id} xs={12} sm={4}>
-              {/* <FoodItem food={food} /> */}
-              <ResponsiveDrawer food={food}/>
-            </Grid>
-          ))}
-        </Grid>
       </Wrapper>
     </ThemeProvider>
   );
