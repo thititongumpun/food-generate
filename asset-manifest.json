@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/food-generate/static/js/main.cbff4e7a.chunk.js",
-    "main.js.map": "/food-generate/static/js/main.cbff4e7a.chunk.js.map",
+    "main.js": "/food-generate/static/js/main.ee340e86.chunk.js",
+    "main.js.map": "/food-generate/static/js/main.ee340e86.chunk.js.map",
     "runtime-main.js": "/food-generate/static/js/runtime-main.e9c49278.js",
     "runtime-main.js.map": "/food-generate/static/js/runtime-main.e9c49278.js.map",
-    "static/js/2.ed08697e.chunk.js": "/food-generate/static/js/2.ed08697e.chunk.js",
-    "static/js/2.ed08697e.chunk.js.map": "/food-generate/static/js/2.ed08697e.chunk.js.map",
+    "static/js/2.f0976298.chunk.js": "/food-generate/static/js/2.f0976298.chunk.js",
+    "static/js/2.f0976298.chunk.js.map": "/food-generate/static/js/2.f0976298.chunk.js.map",
     "index.html": "/food-generate/index.html",
-    "static/js/2.ed08697e.chunk.js.LICENSE.txt": "/food-generate/static/js/2.ed08697e.chunk.js.LICENSE.txt"
+    "static/js/2.f0976298.chunk.js.LICENSE.txt": "/food-generate/static/js/2.f0976298.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e9c49278.js",
-    "static/js/2.ed08697e.chunk.js",
-    "static/js/main.cbff4e7a.chunk.js"
+    "static/js/2.f0976298.chunk.js",
+    "static/js/main.ee340e86.chunk.js"
   ]
 }
